@@ -1,0 +1,162 @@
+/* Variabes */
+/* Mixin's */
+body {
+    background: #686868;
+    font-family: 'Tinos', serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #000000;
+  }
+  
+  h1 {
+    font-weight: 200;
+    font-size: 2.2em;
+  }
+
+  
+  div {
+    width:445px;
+    /* height: 400px; */
+    margin: auto;
+  }
+
+  .ten {
+    width: 460px;
+    margin: auto;
+    align: center;
+  }
+  
+  [data-view="card"] {
+    transform: rotateY(180deg);
+    width: 41px;
+    height: 49px;
+    margin: 2px;
+    float: left;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .flipped {
+    transition: 0.2s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+  }
+  
+  .reverse {
+    transition: 0.2s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+  }
+  
+  .correct {
+    transition: 0.8s;
+    opacity: 0.5;
+    cursor: default;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: translateX(1%);
+    outline: 2px solid rgb(6, 250, 39);
+    outline-offset: -3px;
+  }
+  
+  /* Cards */
+  .correct[data-item="1"],
+  .flipped[data-item="1"] {
+    width: 41px;
+    height: 49px;
+    background: url("./num/1.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="2"],
+  .flipped[data-item="2"] {
+    background: url("./num/2.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="3"],
+  .flipped[data-item="3"] {
+    background: url("./num/3.png") left center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="4"],
+  .flipped[data-item="4"] {
+    background: url("./num/4.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="5"],
+  .flipped[data-item="5"] {
+    background: url("./num/5.png") left center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="6"],
+  .flipped[data-item="6"] {
+    background: url("./num/6.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="7"],
+  .flipped[data-item="7"] {
+    background: url("./num/7.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="8"],
+  .flipped[data-item="8"] {
+    background: url("./num/8.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="9"],
+  .flipped[data-item="9"] {
+    background: url("./num/9.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="10"],
+  .flipped[data-item="10"] {
+    background: url("./num/10.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="11"],
+  .flipped[data-item="11"] {
+    background: url("./num/11.png")  center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="12"],
+  .flipped[data-item="12"] {
+    background: url("./num/12.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="13"],
+  .flipped[data-item="13"] {
+    background: url("./num/13.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="14"],
+  .flipped[data-item="14"] {
+    background: url("./num/14.png") center ;
+    background-size: contain;
+  }
+  
+  .correct[data-item="15"],
+  .flipped[data-item="15"] {
+    background: url("./num/15.png") center ;
+    background-size: contain;
+  }
+
+  canvas {
+    display:block;
+    width: 431px;
+    height: 218px;
+}

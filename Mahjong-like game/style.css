@@ -1,0 +1,147 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* html {
+  overflow: hidden;
+} */
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: "SF Pro Display";
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;   
+    flex-direction: column;
+}
+
+.title {
+    margin: auto auto 0px auto;
+    font-size: 68px;
+    width: 600px;
+    display: flex;
+    perspective: 1000px;
+}
+.memory_game {
+    width: 600px;
+    height: 195px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    perspective: 1000px;
+}
+
+.memory_card {
+    width: 60px;
+    transform: scale(1);
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.memory_card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory_card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+
+}
+
+.card_front_face,
+.card_back_face {
+    width: 41px;
+    height: 49px;
+    background: rgb(226, 223, 223);
+    text-align: center;
+    padding: 12px;
+    border-radius: 16%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(42, 202, 10, 0.3);
+
+}
+
+.card_front_face {
+    transform: rotateY(180deg);
+}
